@@ -22,6 +22,7 @@ body {
   background-color: #bcba7e;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 h1,
 h2 {
