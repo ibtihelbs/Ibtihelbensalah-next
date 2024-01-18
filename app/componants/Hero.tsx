@@ -21,7 +21,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, transform: "translate(-50%, -50%)" }}
         transition={{ duration: 2 }}
       >
-        <h3>Hi! it's IBTIHEL BEN SALAH</h3>
+        <h3>Hi! it&apos;s IBTIHEL BEN SALAH</h3>
         <h1 className="text-[35px] leading-[20px] mt-4 mb-4   md:text-[80px]  md:leading-[50px] md:mt-5 md:mb-5 ">
           Frontend Developer
         </h1>

@@ -1,9 +1,5 @@
-"use client";
-import { useParams } from "next/navigation";
 const page = () => {
-  const params = useParams();
-  console.log(params);
-  return <div>{params.id}</div>;
+  return <div>hi</div>;
 };
 
 export default page;
