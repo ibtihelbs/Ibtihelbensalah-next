@@ -23,12 +23,12 @@ const Card: React.FC<CardProps> = ({
   exploreLink,
 }) => {
   return (
-    <div className=" mx-auto mb-8 bg-white shadow-lg rounded-md overflow-hidden">
+    <div className="relative  mb-8 bg-white h-full shadow-lg rounded-md overflow-hidden">
       <Image
         src={image}
         alt={`Project: ${name}`}
-        className="w-full h-full object-cover"
         fill
+        className="h-full top-0 w-full origin-top object-cover"
       />
     </div>
   );

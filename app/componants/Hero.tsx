@@ -8,23 +8,15 @@ const liners = [
   "Modern Webcrafting",
 ];
 
-const variants: any = {
-  visible: (i: number) => ({
-    opacity: 1,
-    transform: "translate(0)",
-    transition: {
-      delay: i * 1,
-    },
-  }),
-  hidden: { opacity: 0, transform: "translate(100%)" },
-};
-
 const Hero = () => {
   return (
     <section className="relative h-screen w-screen ">
+      {/**
       <Spline scene="https://prod.spline.design/BMvF1lfrpAfRKfPN/scene.splinecode" />
+       * 
+       */}
       <motion.div
-        className="w-4/5 max-w-lg absolute  top-1/2 left-1/2 md:z-10 "
+        className="w-4/5 max-w-[800px] absolute  top-1/2 left-1/2 md:z-10 "
         initial={{ opacity: 0, transform: "translateY(-100%)" }}
         whileInView={{ opacity: 1, transform: "translate(-50%, -50%)" }}
         transition={{ duration: 2 }}
@@ -38,9 +30,6 @@ const Hero = () => {
             className="text-[15px] leading-[10px] mt-2 md:text-[40px] md:leading-[45px] md:m-3 italic"
             custom={i}
             key={i}
-            initial="hidden"
-            animate="visible"
-            variants={variants}
           >
             {v}
           </motion.h2>

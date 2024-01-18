@@ -2,12 +2,14 @@
 import Card from "./Card";
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { VscArrowRight } from "react-icons/vsc";
+
 import Link from "next/link";
 const projects = [
   {
     id: 1,
     name: "Project 1",
-    image: "/url-to-project-1-image.jpg",
+    image: "/portfolio/8.jpg",
     description:
       "A brief overview of Project 1, highlighting its purpose, features, and your role in its development.",
     technologies: {
@@ -21,7 +23,8 @@ const projects = [
   {
     id: 2,
     name: "Project 2",
-    image: "/url-to-project-2-image.jpg",
+    image: "/portfolio/7.png",
+
     description:
       "A brief overview of Project 2, highlighting its purpose, features, and your role in its development.",
     technologies: {
@@ -35,7 +38,7 @@ const projects = [
   {
     id: 3,
     name: "Project 3",
-    image: "/url-to-project-3-image.jpg",
+    image: "/portfolio/3.png",
     description:
       "A brief overview of Project 3, highlighting its purpose, features, and your role in its development.",
     technologies: {
@@ -47,15 +50,16 @@ const projects = [
     exploreLink: "URL-to-explore-Project-3",
   },
 ];
-{
-  /**${
-              project.id == 1 || 3
-                ? " col-span-2 "
-                : project.id == 2
-                ? "row-span-5"
-                : null
-            } */
-}
+const variants: any = {
+  visible: (i: number) => ({
+    opacity: 1,
+    transform: "translate(0)",
+    transition: {
+      delay: i * 1,
+    },
+  }),
+  hidden: { opacity: 0, transform: "translate(100%)" },
+};
 const Features: React.FC = () => {
   const ref = useRef(null);
   const isInview = useInView(ref);
@@ -64,27 +68,34 @@ const Features: React.FC = () => {
   }, [isInview]);
   return (
     <motion.div ref={ref}>
-      <div className="grid grid-rows-5 grid-cols-3 gap-4 h-screen bg-orange-400 w-screen">
-        <h1 className={`col-span-3 bg-blue-500`}>Latest Projects</h1>
-        {projects.map((project) => (
-          <div
+      <div className="grid grid-rows-5 p-6 grid-cols-3 gap-4 h-screen  w-screen">
+        <h1 className={`text-4xl font-audio col-span-3 `}>Latest Projects</h1>
+        {projects.map((project, i) => (
+          <motion.div
             key={project.id}
             className={`${
               project.id == 1
                 ? "col-span-2 row-span-2"
                 : project.id == 2
-                ? "row-span-3"
+                ? "row-span-4"
                 : project.id == 3
                 ? "col-span-2 row-span-3"
                 : ""
-            } bg-red-500`}
+            } `}
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
           >
-            <div>{project.id}</div>
             <Card {...project} />
-          </div>
+          </motion.div>
         ))}
         <div>
-          <Link href={"/Work"}>more</Link>
+          <Link
+            href={"/Work"}
+            className="font-audio  flex justify-between items-center text-4xl"
+          >
+            more <VscArrowRight />{" "}
+          </Link>
         </div>
       </div>
     </motion.div>

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&display=swap");
 @tailwind base;
+html {
+  scroll-behavior: smooth;
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -19,7 +22,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #bcba7e;
+
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   overflow-x: hidden;

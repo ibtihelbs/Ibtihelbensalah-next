@@ -1,20 +1,31 @@
-import React from "react";
+import { BiArrowToBottom } from "react-icons/bi";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact</h1>
-      <form action="">
-        <input type="email" name="email" />
-        <input type="text" placeholder="subject" name="subject" />
-        <a
-          href="https://drive.google.com/file/d/1G2EjIJqfP8tQ65XCgvCYu1m3Y6F3WtsX/view?usp=sharing"
-          download
-        >
-          download
-        </a>
-      </form>
-    </div>
+    <section
+      id="contact"
+      className="bg-main w-screen h-screen flex font-bold flex-col gap-8 items-center justify-center"
+    >
+      <div>
+        <h1 className="text-6xl">let's get in touch </h1>
+        <div className="flex gap-4 items-center justify-between">
+          <h2 className="text-6xl">Click Bellow</h2>
+          <BiArrowToBottom style={{ transform: "scale(3) rotate(50deg)" }} />
+        </div>
+        <ul className="text-3xl mt-5">
+          <li>
+            <a href="mailto:ibtihel.bensalah@outlook.fr" className="underline">
+              Ibtihel.bensalah@outlook.fr
+            </a>
+          </li>
+          {/**<li className="hover:cursor-pointer">
+            <a href="./ibtihelbensalah-cv.pdf" download="ibtihelbensalah-cv">
+              Download cv
+            </a>
+          </li> */}
+        </ul>
+      </div>
+    </section>
   );
 };
 
