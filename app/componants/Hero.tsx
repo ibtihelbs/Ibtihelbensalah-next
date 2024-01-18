@@ -11,10 +11,8 @@ const liners = [
 const Hero = () => {
   return (
     <section className="relative h-screen w-screen ">
-      {/**
       <Spline scene="https://prod.spline.design/BMvF1lfrpAfRKfPN/scene.splinecode" />
-       * 
-       */}
+
       <motion.div
         className="w-4/5 max-w-[800px] absolute  top-1/2 left-1/2 md:z-10 "
         initial={{ opacity: 0, transform: "translateY(-100%)" }}
