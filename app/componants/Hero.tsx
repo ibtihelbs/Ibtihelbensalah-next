@@ -1,39 +1,28 @@
 "use client";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
-const liners = [
-  "",
-  "User-Centric  Interface",
-  "Performant Web Solutions",
-  "Modern Webcrafting",
-];
-
+import H1 from "./H1";
+import H2 from "./H2";
+import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative h-screen w-screen ">
+      {/**
       <Spline scene="https://prod.spline.design/BMvF1lfrpAfRKfPN/scene.splinecode" />
-
+   * 
+   */}
       <motion.div
-        className="w-4/5 max-w-[800px] absolute  top-1/2 left-1/2 md:z-10 "
-        initial={{ opacity: 0, transform: "translateY(-100%)" }}
+        className="w-4/5 max-w-[900px] absolute  top-1/2 left-1/2 md:z-10 "
+        initial={{ opacity: 0, transform: "translate(-100%, -100%)" }}
         whileInView={{ opacity: 1, transform: "translate(-50%, -50%)" }}
         transition={{ duration: 2 }}
       >
-        <h3>Hi! it&apos;s IBTIHEL BEN SALAH</h3>
-        <h1 className="text-[35px] leading-[20px] mt-4 mb-4   md:text-[80px]  md:leading-[50px] md:mt-5 md:mb-5 ">
-          Frontend Developer
-        </h1>
-        {liners.map((v, i) => (
-          <motion.h2
-            className="text-[15px] leading-[10px] mt-2 md:text-[40px] md:leading-[45px] md:m-3 italic"
-            custom={i}
-            key={i}
-          >
-            {v}
-          </motion.h2>
-        ))}
-        <button className="mt-4 py-4 px-8 bg-green-400 font-bold border-black border-2 rounded-full border-solid">
-          Explore My Work
+        <H2 content="Frontend developer" />
+        <H1 content="Creating websites that  keeps your audience" />
+        <H1 content="Interested and invested." />
+
+        <button className="mt-4 py-4 px-8  font-bold border-black border-2 rounded-full border-solid">
+          <Link href="../#contact">let's get in touch</Link>
         </button>
       </motion.div>
     </section>

@@ -3,6 +3,7 @@ import { Inter, Audiowide } from "next/font/google";
 import "./globals.css";
 import Navbar from "./componants/Navbar";
 import Footer from "./componants/Footer";
+
 const inter = Inter({ subsets: ["latin"] });
 const AudioWide = Audiowide({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${AudioWide.variable}`}>
+      <body className={`bg-main ${inter.className} ${AudioWide.variable}`}>
         <Navbar />
         {children}
         <Footer />

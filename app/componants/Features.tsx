@@ -9,7 +9,7 @@ const projects = [
   {
     id: 1,
     name: "Project 1",
-    image: "/portfolio/8.jpg",
+    image: "/portfolio/1.gif",
     description:
       "A brief overview of Project 1, highlighting its purpose, features, and your role in its development.",
     technologies: {
@@ -23,7 +23,7 @@ const projects = [
   {
     id: 2,
     name: "Project 2",
-    image: "/portfolio/7.png",
+    image: "/portfolio/2.gif",
 
     description:
       "A brief overview of Project 2, highlighting its purpose, features, and your role in its development.",
@@ -38,7 +38,7 @@ const projects = [
   {
     id: 3,
     name: "Project 3",
-    image: "/portfolio/3.png",
+    image: "/portfolio/3.gif",
     description:
       "A brief overview of Project 3, highlighting its purpose, features, and your role in its development.",
     technologies: {

@@ -97,7 +97,7 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
             >
               {Nav.map((item, i) => (
                 <div className="overflow-hidden" key={i}>
-                  <motion.li className="hover:bg-slate-400">
+                  <motion.li onClick={handleMenuToggle}>
                     <Link href={item.link}> {item.name} </Link>
                   </motion.li>
                 </div>

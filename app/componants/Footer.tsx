@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaBehance, FaInstagram } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-main md:h-screen flex items-center justify-center w-full">
+    <footer className="bg-main flex items-center justify-center p-9 w-full">
       <div className="grid gap-5">
         <a
           className="underline text-2xl md:text-4xl hover:no-underline text-center font-audio"

@@ -18,110 +18,87 @@ interface Section {
 }
 
 const sections: Section[] = [
-  { title: "" },
-  { title: "" },
-  { title: "" },
-  { title: "" },
   {
-    title: "High Fidelity and User-Centric Design",
+    title: "Captivate Your Audience",
     details: [
       {
-        subtitle: "High Fidelity",
+        subtitle: "Captivate Your Audience",
         description:
-          "Striving for pixel-perfect designs that closely match the envisioned user interface. This involves attention to detail, ensuring that the end product aligns with the design specifications.",
+          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
       },
       {
-        subtitle: "User-Centric Design",
+        subtitle: "Elevate Your Website Experience",
         description:
-          "Prioritizing the user experience by creating interfaces that are intuitive, visually appealing, and contribute to a positive overall interaction with the application.",
+          "Reach out to us, and let us craft a website tailored to the short attention spans of today's audience—fast, captivating, and accessible on all devices.",
       },
     ],
   },
   {
-    title: "Frontend Development",
+    title:
+      "Get Your Message Across: Transforming Designs into Impactful Digital Experiences",
     details: [
       {
-        subtitle: "Performance Optimization",
+        subtitle: "Get Your Message Across",
         description:
-          "Ensuring that web applications are optimized for speed and efficiency. This involves minimizing load times, reducing unnecessary requests, and overall enhancing the performance of the user interface.",
+          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
       },
       {
-        subtitle: "Responsive Design",
+        subtitle: "Transforming Designs",
         description:
-          "Creating interfaces that seamlessly adapt to various devices and screen sizes. This contributes to a consistent and enjoyable user experience across different platforms.",
+          "Reach out to us, and let us craft a website tailored to the short attention spans of today's audience—fast, captivating, and accessible on all devices.",
       },
     ],
   },
   {
-    title: "Design Phase",
+    title:
+      "Get Your Message Across: Transforming Designs into Impactful Digital Experiences",
     details: [
       {
-        subtitle: "Strategic Design",
+        subtitle: "Get Your Message Across",
         description:
-          "Applying design principles strategically to contribute to higher conversion rates. This may involve creating clear calls-to-action, optimizing the user flow, and using visual elements to guide users toward desired actions.",
+          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
       },
       {
-        subtitle: "User Psychology",
+        subtitle: "Transforming Designs",
         description:
-          "Understanding user behavior and psychology to influence their decision-making positively. Implementing design elements that resonate with your target audience and encourage them to take the desired actions.",
+          "Reach out to us, and let us craft a website tailored to the short attention spans of today's audience—fast, captivating, and accessible on all devices.",
       },
     ],
-  },
-  {
-    title: "Backend Development",
-    details: [
-      {
-        subtitle: "Robust Systems",
-        description:
-          "Developing a strong and reliable backend architecture that can handle various functionalities, scale with the growth of the application, and ensure smooth operations.",
-      },
-      {
-        subtitle: "Efficiency",
-        description:
-          "Optimizing backend code for efficiency and resource utilization, ensuring that the application runs smoothly and responds quickly to user requests.",
-      },
-      {
-        subtitle: "Security",
-        description:
-          "Implementing robust security measures to protect sensitive data, prevent unauthorized access, and ensure the overall integrity of the system.",
-      },
-    ],
-  },
-  {
-    title: "Holistic Approach",
-    description:
-      "Commitment to delivering high-quality, end-to-end solutions. By combining design precision, frontend performance, strategic design thinking, and robust backend development, you contribute to creating web applications that excel in both form and function.",
   },
 ];
+
 const About: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-45%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["25%", "-25%"]);
 
   return (
-    <section ref={targetRef} className={`relative h-[200vh]`}>
-      <div className="sticky top-0 flex h-screen overflow-hidden ">
-        <motion.div style={{ x }} className="flex gap-4">
-          {sections.map((section, index) => (
-            <div
-              key={index}
-              className=" h-screen w-screen flex items-center justify-center"
-            >
-              <div className="w-[80%]">
-                <H1 content={section.title} />
-                {section.details?.map((val, key) => (
-                  <div key={key}>
-                    <H2 content={val.subtitle} />
-                    <Paragraph content={val.description} />
-                  </div>
-                ))}
+    <section ref={targetRef} className={`relative h-[200vh] bg-orange-300`}>
+      <div className="sticky bg-purple-700 top-0 flex h-screen overflow-hidden">
+        <h1>hhihihi</h1>
+        {
+          <motion.div style={{ x }} className="flex gap-4">
+            {sections.map((section, index) => (
+              <div
+                key={index}
+                className=" h-screen w-screen flex items-center justify-center"
+              >
+                <div className="w-[80%]">
+                  <H1 content={section.title} />
+                  {section.details?.map((val, key) => (
+                    <div key={key}>
+                      <H2 content={val.subtitle} />
+                      <Paragraph content={val.description} />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        }
       </div>
       <Link href={"/"}> [Connect with Me] | [Explore My Portfolio]</Link>
     </section>

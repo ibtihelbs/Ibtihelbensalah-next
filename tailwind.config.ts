@@ -12,7 +12,7 @@ const config: Config = {
         audio: ["var(--font-audio)"],
       },
       colors: {
-        main: "#bcba7e",
+        main: "#FDADC5",
       },
     },
   },
