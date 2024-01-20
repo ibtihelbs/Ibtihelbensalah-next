@@ -18,8 +18,11 @@ const Hero = () => {
         transition={{ duration: 2 }}
       >
         <H2 content="Frontend developer" />
-        <H1 content="Creating websites that  keeps your audience" />
-        <H1 content="Interested and invested." />
+        <H1
+          noWrap={false}
+          content="Creating websites that  keeps your audience"
+        />
+        <H1 noWrap={false} content="Interested and invested." />
 
         <button className="mt-4 py-4 px-8  font-bold border-black border-2 rounded-full border-solid">
           <Link href="../#contact">let's get in touch</Link>

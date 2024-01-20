@@ -87,7 +87,7 @@ const About: React.FC = () => {
                 className=" h-screen w-screen flex items-center justify-center"
               >
                 <div className="w-[80%]">
-                  <H1 content={section.title} />
+                  <H1 content={section.title} noWrap={false} />
                   {section.details?.map((val, key) => (
                     <div key={key}>
                       <H2 content={val.subtitle} />
