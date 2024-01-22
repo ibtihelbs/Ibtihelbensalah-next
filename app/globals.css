@@ -21,7 +21,6 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   overflow-x: hidden;

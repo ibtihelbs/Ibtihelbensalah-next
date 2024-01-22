@@ -19,17 +19,17 @@ interface Section {
 
 const sections: Section[] = [
   {
-    title: "Captivate Your Audience",
+    title: "High engagement",
     details: [
       {
-        subtitle: "Captivate Your Audience",
+        subtitle: "lo",
         description:
-          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
+          "40% of online users leave a website if it takes more than three seconds to load, and 47% of online shoppers expect an online retail web page to load in under two seconds          ",
       },
       {
-        subtitle: "Elevate Your Website Experience",
+        subtitle: "SEO ",
         description:
-          "Reach out to us, and let us craft a website tailored to the short attention spans of today's audience—fast, captivating, and accessible on all devices.",
+          " Slow websites can also negatively impact SEO, as search engines like Google consider fast load speed as a positive ranking factor. ",
       },
     ],
   },
@@ -50,8 +50,7 @@ const sections: Section[] = [
     ],
   },
   {
-    title:
-      "Get Your Message Across: Transforming Designs into Impactful Digital Experiences",
+    title: "Your website is everywhere",
     details: [
       {
         subtitle: "Get Your Message Across",
@@ -76,8 +75,8 @@ const About: React.FC = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["25%", "-25%"]);
 
   return (
-    <section ref={targetRef} className={`relative h-[200vh] bg-orange-300`}>
-      <div className="sticky bg-purple-700 top-0 flex h-screen overflow-hidden">
+    <section ref={targetRef} className={`relative h-[150vh] `}>
+      <div className="sticky top-0 flex h-screen overflow-hidden">
         <h1>hhihihi</h1>
         {
           <motion.div style={{ x }} className="flex gap-4">

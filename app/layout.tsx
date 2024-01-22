@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-main ${inter.className} ${AudioWide.variable}`}>
+      <body className={`bg-main  ${inter.className} ${AudioWide.variable}`}>
         <Navbar />
         {children}
         <Footer />
