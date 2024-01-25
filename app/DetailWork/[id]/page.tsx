@@ -1,5 +1,10 @@
+import Details from "@/app/componants/Details";
 const page = () => {
-  return <div>hi</div>;
+  return (
+    <div>
+      <Details />
+    </div>
+  );
 };
 
 export default page;

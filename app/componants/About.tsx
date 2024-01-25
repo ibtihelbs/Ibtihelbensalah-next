@@ -2,7 +2,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import H1 from "./H1";
-import Link from "next/link";
 import H2 from "./H2";
 import Paragraph from "./Paragraph";
 
@@ -22,45 +21,29 @@ const sections: Section[] = [
     title: "High engagement",
     details: [
       {
-        subtitle: "lo",
+        subtitle: "Fast website",
         description:
           "40% of online users leave a website if it takes more than three seconds to load, and 47% of online shoppers expect an online retail web page to load in under two seconds          ",
       },
+    ],
+  },
+  {
+    title: "Accross all devices",
+    details: [
       {
-        subtitle: "SEO ",
+        subtitle: "Responsive Website",
         description:
-          " Slow websites can also negatively impact SEO, as search engines like Google consider fast load speed as a positive ranking factor. ",
+          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
       },
     ],
   },
   {
-    title:
-      "Get Your Message Across: Transforming Designs into Impactful Digital Experiences",
+    title: "High Fidelity",
     details: [
       {
-        subtitle: "Get Your Message Across",
+        subtitle: "Design file = interface",
         description:
           "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
-      },
-      {
-        subtitle: "Transforming Designs",
-        description:
-          "Reach out to us, and let us craft a website tailored to the short attention spans of today's audience—fast, captivating, and accessible on all devices.",
-      },
-    ],
-  },
-  {
-    title: "Your website is everywhere",
-    details: [
-      {
-        subtitle: "Get Your Message Across",
-        description:
-          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
-      },
-      {
-        subtitle: "Transforming Designs",
-        description:
-          "Reach out to us, and let us craft a website tailored to the short attention spans of today's audience—fast, captivating, and accessible on all devices.",
       },
     ],
   },
@@ -72,12 +55,11 @@ const About: React.FC = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["25%", "-25%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <section ref={targetRef} className={`relative h-[150vh] `}>
+    <section ref={targetRef} className={`relative h-[150vh] w-screen`}>
       <div className="sticky top-0 flex h-screen overflow-hidden">
-        <h1>hhihihi</h1>
         {
           <motion.div style={{ x }} className="flex gap-4">
             {sections.map((section, index) => (
@@ -99,7 +81,6 @@ const About: React.FC = () => {
           </motion.div>
         }
       </div>
-      <Link href={"/"}> [Connect with Me] | [Explore My Portfolio]</Link>
     </section>
   );
 };

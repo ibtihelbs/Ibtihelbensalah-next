@@ -1,4 +1,6 @@
-import Image from "next/image";
+import Link from "next/link";
+import { VscArrowRight } from "react-icons/vsc";
+
 import Hero from "./componants/Hero";
 import About from "./componants/About";
 import Features from "./componants/Features";
@@ -10,6 +12,12 @@ export default function Home() {
       <Hero />
       <About />
       <Features />
+      <Link
+        href={"/Work"}
+        className="font-audio  flex justify-between items-center text-4xl"
+      >
+        more <VscArrowRight />{" "}
+      </Link>
       <Contact />
     </main>
   );

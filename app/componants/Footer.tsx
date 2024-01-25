@@ -1,17 +1,16 @@
 import { FaGithub, FaLinkedin, FaBehance, FaInstagram } from "react-icons/fa";
-
+import Paragraph from "./Paragraph";
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-main flex items-center justify-center p-9 w-full">
+    <footer className=" flex items-center justify-center p-9 w-full">
       <div className="grid gap-5">
         <a
-          className="underline text-2xl md:text-4xl hover:no-underline text-center font-audio"
+          className="underline  hover:no-underline text-center"
           href="mailto:ibtihel.bensalah@outlook.fr"
         >
-          ibtihel.bensalah@outlook.fr
+          <Paragraph content="ibtihel.bensalah@outlook.fr" />
         </a>
-        <hr className="bg-black h-1 border-none" />
-        <ul className="flex justify-between p-6 mb-4">
+        <ul className="flex justify-evenly">
           <li>
             <a
               href="https://linkedin.com/in/ibtihel-ben-salah"
@@ -49,7 +48,6 @@ const Footer: React.FC = () => {
             </a>
           </li>
         </ul>
-        <hr className="bg-black h-1 border-none" />
         <p className="text-center font-bold">
           © 2024 ibtihel ben salah. All rights reserved.
         </p>

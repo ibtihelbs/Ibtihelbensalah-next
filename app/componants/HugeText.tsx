@@ -5,7 +5,7 @@ interface contentProp {
 const HugeText: React.FC<contentProp> = ({ content, noWrap }) => {
   return (
     <h1
-      className={`font-audio text-5xl md:leading-none uppercase  md:text-[136px] p-10 ${
+      className={`font-audio text-4xl md:leading-none uppercase  md:text-[132px] md:p-10 ${
         noWrap ? "whitespace-nowrap" : ""
       }`}
     >

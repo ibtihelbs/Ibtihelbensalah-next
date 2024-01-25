@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import Link from "next/link";
-import { FaHamburger } from "react-icons/fa";
-import { IoIosClose } from "react-icons/io";
+import { TiThMenu } from "react-icons/ti";
+import { IoClose } from "react-icons/io5";
+
 import { AnimatePresence, motion } from "framer-motion";
 const Nav = [
   { name: "Home", link: "/" },
@@ -71,7 +72,7 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
   return (
     <div className="font-audio visible md:hidden ">
       <button onClick={handleMenuToggle}>
-        <FaHamburger />{" "}
+        <TiThMenu />{" "}
       </button>
       <AnimatePresence>
         {isMenuOpen && (
@@ -85,7 +86,7 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
           >
             <li>
               <button className="float-right" onClick={handleMenuToggle}>
-                <IoIosClose />
+                <IoClose />
               </button>
             </li>
             <motion.ul
@@ -122,11 +123,15 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="flex justify-between absolute mb-3 z-10 w-full bg-transparent">
-      <Search />
+    <nav className="flex justify-between w-screen absolute z-10 md:py-6 md:px-10 bg-transparent">
+      {/**
+       * 
+       * <Search />
       <Link href={"/"}>
         <h1 className="cursor-pointer text-xl font-bold">ibs</h1>
       </Link>
+       */}
+      . .
       <NavbarDesktop />
       <NavbarMobile
         handleMenuToggle={handleMenuToggle}
