@@ -3,17 +3,18 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
 import { usePathname } from "next/navigation";
+
 interface ProjectData {
-  // Define the structure of your project data here
   name: string;
   image: string;
   description: string;
-  technologies: {
-    frontend: string[];
-    backend: string[];
-  };
+  technologies: { frontend: string[]; backend: string[] };
   contributions: string;
   exploreLink: string;
+  key: number;
+  _id: string;
+  id: number;
+  codeLink: string;
 }
 
 const Features: React.FC = () => {
@@ -43,7 +44,9 @@ const Features: React.FC = () => {
     <section className="w-screen">
       <div className="grid gap-8">
         {projects.map((project, i) => (
-          <Card key={i} {...project} />
+          <div key={i}>
+            <Card {...project} />
+          </div>
         ))}
       </div>
     </section>

@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
   codeLink,
 }) => {
   return (
-    <div className=" flex flex-col items-center ">
+    <div className=" flex flex-col items-center gap-2 border-black border-[3px]">
       <Link href={`DetailWork/${_id}`} className="relative ">
         <Image
           src={image}
