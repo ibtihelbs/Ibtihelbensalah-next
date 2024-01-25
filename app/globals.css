@@ -24,4 +24,18 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  background-color: orange;
+}
+.overlay::before {
+  position: fixed;
+  content: "";
+  pointer-events: none;
+  z-index: 1500;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  background-image: url(../public/POSTER-15.png);
+  opacity: 0.02;
 }

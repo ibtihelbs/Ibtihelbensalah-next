@@ -26,7 +26,7 @@ interface ProjectData {
   __v: number;
 }
 
-const Details = (_id: string) => {
+const Details = () => {
   const [singleData, setSingleData] = useState<ProjectData>();
   const param = useParams().id;
 
