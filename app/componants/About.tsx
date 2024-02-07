@@ -67,15 +67,21 @@ const About: React.FC = () => {
                 key={index}
                 className=" h-screen w-screen flex items-center justify-center"
               >
-                <div className="w-[80%]">
+                <motion.div
+                  initial={{ transform: "scale(.8)" }}
+                  animate={{ transform: "scale(1.2)" }}
+                  transition={{ duration: 3, ease: "easeInOut" }}
+                  exit={{ transform: "scale(1)" }}
+                  className="w-[50%] grid gap-4"
+                >
                   <H1 content={section.title} noWrap={false} />
                   {section.details?.map((val, key) => (
-                    <div key={key}>
+                    <div key={key} className="grid gap-2">
                       <H2 content={val.subtitle} />
                       <Paragraph content={val.description} />
                     </div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             ))}
           </motion.div>

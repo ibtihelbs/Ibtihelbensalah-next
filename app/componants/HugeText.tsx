@@ -1,16 +1,35 @@
+"use client";
+import { motion } from "framer-motion";
 interface contentProp {
   content: string;
   noWrap: boolean;
 }
 const HugeText: React.FC<contentProp> = ({ content, noWrap }) => {
+  const animateText = {
+    initial: {
+      y: "30vh",
+      transition: {
+        duration: 0.5,
+        ease: [0.37, 0, 0.63, 1],
+      },
+    },
+    open: {
+      y: 0,
+      transition: {
+        ease: [0, 0.55, 0.45, 1],
+        duration: 0.7,
+      },
+    },
+  };
   return (
-    <h1
-      className={`font-audio text-4xl md:leading-none uppercase  md:text-[132px] md:p-10 ${
+    <motion.h1
+      variants={animateText}
+      className={`font-audio text-4xl md:leading-none uppercase  md:text-[132px]  ${
         noWrap ? "whitespace-nowrap" : ""
       }`}
     >
       {content}
-    </h1>
+    </motion.h1>
   );
 };
 

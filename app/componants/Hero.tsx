@@ -5,25 +5,55 @@ import H1 from "./H1";
 import H2 from "./H2";
 import Link from "next/link";
 import HugeText from "./HugeText";
+import Paragraph from "./Paragraph";
 const Hero = () => {
+  const containerVars = {
+    initial: {
+      transition: {
+        staggerChildren: 0.09,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.09,
+        staggerDirection: 1,
+      },
+    },
+  };
   return (
-    <section className=" md:h-[200vh]  h-screen p-5 w-screen grid grid-cols-3 gap-2 md:grid-cols-12 md:gap-4 md:grid-rows-8">
+    <section className=" md:h-[150vh] md:pt-10  h-screen p-5 w-screen grid grid-cols-3 gap-2 md:grid-cols-12 md:gap-4 md:grid-rows-8">
       {/*
         <Spline
         scene="https://prod.spline.design/BMvF1lfrpAfRKfPN/scene.splinecode"
         className="absolute w-full h-[200vh]  -z-10"
-      /> 
-
-        */}
-      <div className="md:col-start-2 md:col-end-4 col-span-2">
-        <H1 noWrap={false} content="Hi !  I's Ibtihel ben salah" />
-      </div>
-      <div className="md:col-start-4  md:row-start-1 col-start-1">
-        <HugeText noWrap={false} content="Frontend developer" />
-      </div>
-      <div className="hidden md:block md:col-start-2 md:col-end-8 md:row-start-4">
-        <H1 noWrap={false} content="Creating websites that..." />
-        <H1 noWrap={false} content="keep their attention!" />
+      />  */}
+      <motion.div
+        initial={{ opacity: 0, transform: "translateY(-100%)" }}
+        animate={{ opacity: 1, transform: "translateY(0)" }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        className="md:col-start-2 md:col-end-4 col-span-2"
+      >
+        <H2 content="Hi !  I's Ibtihel ben salah" />
+      </motion.div>
+      <motion.div
+        variants={containerVars}
+        initial="initial"
+        animate="open"
+        exit="initial"
+        className=" md:col-start-5 md:row-start-1 md:row-end-3 col-start-1 col-end-13 "
+      >
+        <div className="overflow-hidden">
+          <HugeText noWrap={false} content="Frontend" />
+        </div>
+        <div className="overflow-hidden">
+          <HugeText noWrap={true} content="Developer" />
+        </div>
+      </motion.div>
+      <div className="hidden md:block md:col-start-2 md:col-end-8 md:row-start-4 self-end">
+        <Paragraph content="Creating websites that..." />
+        <Paragraph content="keep their attention!" />
       </div>
       <div></div>
       <div className="md:col-start-10 md:col-end-12  md:row-start-4 col-start-2 col-end-4">

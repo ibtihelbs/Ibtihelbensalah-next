@@ -14,6 +14,9 @@ const config: Config = {
       colors: {
         main: "#FDADC5",
       },
+      boxShadow: {
+        xl4: "5px 5px 5px 0px rgba(0, 0, 0, 1)",
+      },
     },
   },
   plugins: [],

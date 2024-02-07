@@ -41,7 +41,7 @@ const Features: React.FC = () => {
     fetchData();
   }, [setProjects]);
   return (
-    <section className="w-screen">
+    <section>
       <div className="grid gap-8">
         {projects.map((project, i) => (
           <div key={i}>

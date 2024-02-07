@@ -24,7 +24,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
-  background-color: orange;
 }
 .overlay::before {
   position: fixed;
@@ -38,4 +37,7 @@ body {
   top: 0;
   background-image: url(../public/POSTER-15.png);
   opacity: 0.02;
+}
+.cursor:hover {
+  cursor: url("../public/cursor.gif");
 }

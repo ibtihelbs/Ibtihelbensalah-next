@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import H3 from "./H3";
+import H2 from "./H2";
 import { FaGithub, FaLink } from "react-icons/fa";
 interface CardProps {
   key: number;
@@ -30,20 +31,22 @@ const Card: React.FC<CardProps> = ({
   codeLink,
 }) => {
   return (
-    <div className=" flex flex-col items-center gap-2 border-black border-[3px]">
-      <Link href={`DetailWork/${_id}`} className="relative ">
+    <div className=" shadow-xl4 w-[80vw] flex flex-col items-center  md:p-4  gap-2 border-2 border-solid border-black  rounded-[50px]">
+      <Link
+        href={`DetailWork/${_id}`}
+        className="cursor w-full md:h-96 h-40 relative hover:opacity-80 hover:scale-95 transition-all "
+      >
         <Image
           src={image}
           alt={`Project: ${name}`}
-          width={1128}
-          height={500}
-          className="shadow-lg  w-[80vw] hover:cursor-pointer rounded-md object-cover overflow-hidden"
+          fill
+          className="shadow-lg   hover:cursor-pointer object-cover border-2 border-solid border-black  rounded-[50px] overflow-hidden"
         />
       </Link>
 
       <div
         id="details"
-        className="flex  w-[80vw] justify-between md:w-[1028px]"
+        className="flex  md:px-12 md:py-6  p-2  w-full justify-between"
       >
         <div className="hidden md:block">
           <H3 content="Tech : " />
@@ -53,7 +56,7 @@ const Card: React.FC<CardProps> = ({
             ))}
           </ul>
         </div>
-        <H3 content={name} />
+        <H2 content={name} />
         <div>
           <div className="hidden md:block">
             <H3 content="Links:" />
