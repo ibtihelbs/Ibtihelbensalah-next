@@ -50,7 +50,7 @@ const Features: React.FC = () => {
               <H3 content="Portfolio" />
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="md:col-span-4 col-span-2 grid grid-cols-1">
             <HugeText content="Latest__" noWrap={false} />
             <div className="text-end">
               <HugeText content="__work" noWrap={false} />

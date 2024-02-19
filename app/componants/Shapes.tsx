@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Shapes = () => {
   return (
-    <div className="relative animate-spin-slow">
+    <div className="relative animate-spin-slow w-[200px] ">
       <Image
         width={500}
         height={500}
