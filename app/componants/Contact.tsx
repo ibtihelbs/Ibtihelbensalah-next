@@ -30,11 +30,13 @@ const Contact = () => {
             <motion.div
               variants={containerVars}
               initial="initial"
-              whileInView="open"
+              animate="open"
             >
-              <H1 noWrap={false} content="Click Bellow &" />
+              <div className="overflow-hidden">
+                <H1 noWrap={false} content="Click Bellow &" />
 
-              <H1 noWrap={false} content="send an email" />
+                <H1 noWrap={false} content="send an email" />
+              </div>
             </motion.div>
             <Image
               src={"/shape-45.png"}
@@ -44,7 +46,7 @@ const Contact = () => {
               className="rotate-[-135deg] mt-8"
             />
           </div>
-          <ul className="text-4xl text-center hidden md:block mt-5">
+          <ul className="text-4xl text-center  mt-5">
             <li>
               <a
                 href="mailto:ibtihel.bensalah@outlook.fr"

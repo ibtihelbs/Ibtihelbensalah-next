@@ -2,13 +2,13 @@ import H1 from "./H1";
 import H3 from "./H3";
 const Services = () => {
   return (
-    <section className="grid grid-cols-5   py-50 gap-4 ">
+    <section className="grid md:grid-cols-5  grid-cols-2  py-50 gap-4 ">
       <div>
         <div className="line-hr">
           <H3 content="services" />
         </div>
       </div>
-      <div className="col-span-2 px-8">
+      <div className="md:col-span-2 px-8">
         <H1 content="what do " noWrap={false} />
         <div className="text-end">
           <H1 content="I do ?" noWrap={false} />

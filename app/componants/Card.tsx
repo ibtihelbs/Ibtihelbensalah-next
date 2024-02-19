@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({
   codeLink,
 }) => {
   return (
-    <div className=" shadow-xl4 w-[80vw] flex flex-col items-center  md:p-4  gap-2 border-2 border-solid border-black  rounded-[50px]">
+    <div className=" shadow-xl4 w-[80vw] flex flex-col items-center  md:p-4  gap-2 border-2 border-solid border-black rounded-2xl md:rounded-[50px]">
       <Link
         href={`DetailWork/${_id}`}
         className="cursor w-full md:h-96 h-40 relative hover:opacity-80 hover:scale-95 transition-all "
@@ -40,7 +40,7 @@ const Card: React.FC<CardProps> = ({
           src={image}
           alt={`Project: ${name}`}
           fill
-          className="shadow-lg   hover:cursor-pointer object-cover border-2 border-solid border-black  rounded-[50px] overflow-hidden"
+          className="shadow-lg   hover:cursor-pointer object-cover border-2 border-solid border-black rounded-2xl  md:rounded-[50px] overflow-hidden"
         />
       </Link>
 
@@ -56,12 +56,15 @@ const Card: React.FC<CardProps> = ({
             ))}
           </ul>
         </div>
-        <H2 content={name} />
+        <div className="w-[200px]">
+          <H2 content={name} />
+        </div>
+
         <div>
           <div className="hidden md:block">
             <H3 content="Links:" />
           </div>
-          <ul className="flex flex-col md:flex-row justify-between">
+          <ul className="flex flex-row justify-between">
             <li>
               <Link href={exploreLink}>
                 <FaLink />
@@ -74,7 +77,7 @@ const Card: React.FC<CardProps> = ({
               </Link>
             </li>
           </ul>
-          <Link href={`DetailWork/${_id}`}>
+          <Link href={`DetailWork/${_id}`} className="w-[50px] h-[50px]">
             <Image src={"/cursor.gif"} alt="cursor" width={100} height={100} />
           </Link>
         </div>

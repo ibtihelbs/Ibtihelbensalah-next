@@ -23,11 +23,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center">
+    <section className="h-screen flex flex-col justify-center items-center md:gap-0 gap-8 ">
       <motion.div
         variants={containerVars}
         initial="initial"
-        animate="open"
+        whileInView="open"
         exit="initial"
       >
         <div className="overflow-hidden text-center">
@@ -36,8 +36,8 @@ const Hero = () => {
           <HugeText content="developer" noWrap={true} />
         </div>
       </motion.div>
-      <div className="flex justify-between items-end md:w-[1000px]">
-        <div className="w-40">
+      <div className="flex md:flex-row md:justify-between  md:items-end flex-col items-center md:w-[1000px]">
+        <div className="w-40 md:text-start text-center">
           <Paragraph content="I create modern catchy websites that will capture your audience" />
         </div>
         <Link

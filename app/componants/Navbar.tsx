@@ -98,9 +98,9 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
             >
               {Nav.map((item, i) => (
                 <div className="overflow-hidden" key={i}>
-                  <motion.li onClick={handleMenuToggle}>
+                  <li onClick={handleMenuToggle}>
                     <Link href={item.link}> {item.name} </Link>
-                  </motion.li>
+                  </li>
                 </div>
               ))}
             </motion.ul>
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="flex justify-between w-screen absolute z-10 md:py-6 md:px-10 bg-transparent">
+    <nav className="flex justify-between w-screen absolute z-10  md:py-6 md:px-10 px-5 bg-transparent">
       {/**
        * 
        * <Search />
