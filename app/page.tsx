@@ -21,7 +21,7 @@ export default function Home() {
       >
         more <VscArrowRight />{" "}
       </Link>
-      <About />
+      {/**<About /> */}
 
       <Contact />
     </main>
