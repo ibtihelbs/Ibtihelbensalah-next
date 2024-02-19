@@ -5,12 +5,15 @@ import Hero from "./componants/Hero";
 import About from "./componants/About";
 import Features from "./componants/Features";
 import Contact from "./componants/Contact";
-import { motion } from "framer-motion";
+import Services from "./componants/Services";
+import Shapes from "./componants/Shapes";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <Hero />
-      <About />
+
+      <Services />
+      <Shapes />
       <Features />
       <Link
         href={"/Work"}
@@ -18,6 +21,8 @@ export default function Home() {
       >
         more <VscArrowRight />{" "}
       </Link>
+      <About />
+
       <Contact />
     </main>
   );

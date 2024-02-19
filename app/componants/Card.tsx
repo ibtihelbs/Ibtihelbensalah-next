@@ -74,6 +74,9 @@ const Card: React.FC<CardProps> = ({
               </Link>
             </li>
           </ul>
+          <Link href={`DetailWork/${_id}`}>
+            <Image src={"/cursor.gif"} alt="cursor" width={100} height={100} />
+          </Link>
         </div>
       </div>
     </div>

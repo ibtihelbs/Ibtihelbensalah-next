@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import H1 from "./H1";
+import H3 from "./H3";
 import H2 from "./H2";
 import Paragraph from "./Paragraph";
 

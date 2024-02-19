@@ -1,20 +1,41 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import H2 from "./H2";
+import H1 from "./H1";
 import Paragraph from "./Paragraph";
 const Contact = () => {
+  const containerVars = {
+    initial: {
+      transition: {
+        staggerChildren: 0.09,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.09,
+        staggerDirection: 1,
+      },
+    },
+  };
   return (
     <section id="contact" className=" md:h-screen w-screen">
       <div className="flex w-[1000px]"></div>
       <div className="flex font-bold flex-col md:gap-8 items-center md:h-[80vh] justify-center">
+        <div className="line-vr-after"></div>
+
         <div>
           <div className="flex gap-4 items-center mt-[-20px] justify-between relative">
-            <div>
-              <H2 content="Click Bellow &" />
+            <motion.div
+              variants={containerVars}
+              initial="initial"
+              whileInView="open"
+            >
+              <H1 noWrap={false} content="Click Bellow &" />
 
-              <H2 content="send an email" />
-            </div>
+              <H1 noWrap={false} content="send an email" />
+            </motion.div>
             <Image
               src={"/shape-45.png"}
               alt="click"
@@ -23,7 +44,7 @@ const Contact = () => {
               className="rotate-[-135deg] mt-8"
             />
           </div>
-          <ul className="text-3xl hidden md:block mt-5">
+          <ul className="text-4xl text-center hidden md:block mt-5">
             <li>
               <a
                 href="mailto:ibtihel.bensalah@outlook.fr"
@@ -39,6 +60,7 @@ const Contact = () => {
           </li> */}
           </ul>
         </div>
+        <div className="line-vr-before"></div>
       </div>
     </section>
   );

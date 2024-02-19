@@ -3,7 +3,9 @@ interface contentProp {
 }
 const H3: React.FC<contentProp> = ({ content }) => {
   return (
-    <h3 className=" text-[16px] font-bold leading-[1] md:text-xl">{content}</h3>
+    <h3 className=" text-[16px] font-bold leading-[1] md:text-4xl">
+      {content}
+    </h3>
   );
 };
 

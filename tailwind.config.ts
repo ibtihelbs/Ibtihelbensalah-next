@@ -12,10 +12,13 @@ const config: Config = {
         audio: ["var(--font-audio)"],
       },
       colors: {
-        main: "#FDADC5",
+        main: "rgb(245, 245, 220)",
       },
       boxShadow: {
         xl4: "5px 5px 5px 0px rgba(0, 0, 0, 1)",
+      },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
       },
     },
   },

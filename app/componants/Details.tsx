@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import H1 from "./H1";
-import H2 from "./H2";
 import H3 from "./H3";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -76,7 +75,7 @@ const Details = () => {
                 <H3 content="Technologie" />
                 {singleData.technologies.frontend.map((v, i) => (
                   <span
-                    className="text-[16px] border-solid border-black px-2 py-1 rounded-full border-[3px]"
+                    className="text-[8px]  border-solid border-black px-2 py-1 rounded-full border-[1px]"
                     key={i}
                   >
                     # {v}{" "}
@@ -85,7 +84,7 @@ const Details = () => {
                 <br />
                 {singleData.technologies.backend.map((v, i) => (
                   <span
-                    className="border-solid border-black px-2 py-1 rounded-full border-[3px]"
+                    className="text-[8px]  border-solid border-black px-2 py-1 rounded-full border-[1px]"
                     key={i}
                   >
                     #{v}

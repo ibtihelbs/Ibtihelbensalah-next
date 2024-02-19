@@ -1,11 +1,16 @@
+"use client";
 import { FaGithub, FaLinkedin, FaBehance, FaInstagram } from "react-icons/fa";
 import Paragraph from "./Paragraph";
+import { usePathname } from "next/navigation";
 const Footer: React.FC = () => {
+  const pathName = usePathname();
   return (
     <footer className=" flex items-center justify-center p-9 w-full">
       <div className="grid gap-5">
         <a
-          className="underline  hover:no-underline text-center"
+          className={`underline ${
+            pathName == "/" ? "hidden" : "block"
+          } hover:no-underline text-center`}
           href="mailto:ibtihel.bensalah@outlook.fr"
         >
           <Paragraph content="ibtihel.bensalah@outlook.fr" />

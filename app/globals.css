@@ -35,9 +35,39 @@ body {
   height: 100%;
   bottom: 0;
   top: 0;
-  background-image: url(../public/POSTER-15.png);
-  opacity: 0.02;
+  background-image: url(../public/giphy.gif);
+  opacity: 0.09;
 }
 .cursor:hover {
   cursor: url("../public/cursor.gif");
+}
+.line-hr {
+  display: flex;
+  gap: 3px;
+  text-transform: capitalize;
+  align-items: center;
+}
+.line-hr::before {
+  content: "";
+  width: 100px;
+  display: inline-block;
+  border-radius: 999px;
+  height: 3px;
+  background-color: black;
+}
+.line-vr-after::after {
+  content: "";
+  height: 80px;
+  display: inline-block;
+  border-radius: 999px;
+  width: 1px;
+  background-color: black;
+}
+.line-vr-before::before {
+  content: "";
+  height: 100px;
+  display: inline-block;
+  border-radius: 999px;
+  width: 1px;
+  background-color: black;
 }

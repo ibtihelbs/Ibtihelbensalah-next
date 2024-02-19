@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Audiowide } from "next/font/google";
+import { Inter, Cinzel_Decorative } from "next/font/google";
 import "./globals.css";
 import Navbar from "./componants/Navbar";
 import Footer from "./componants/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
-const AudioWide = Audiowide({
+
+const Cinzel = Cinzel_Decorative({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
   variable: "--font-audio",
 });
-
 export const metadata: Metadata = {
   title: "ibtihel ben salah-front end developer-portfolio",
   description:
@@ -24,10 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={` ${inter.className} bg-main ${AudioWide.variable}`}>
+      <body className={` ${inter.className} bg-main ${Cinzel.variable}`}>
         <div className="overlay"></div>
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
