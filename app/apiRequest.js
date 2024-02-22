@@ -13,7 +13,6 @@ export const getProjects = async (dispatch) => {
   dispatch(getAllProjects);
   try {
     const res = await PUBLIC_REQUEST.get("projects");
-    console.log(res);
     dispatch(startProject(res.data));
   } catch (error) {
     dispatch(faitureProject);

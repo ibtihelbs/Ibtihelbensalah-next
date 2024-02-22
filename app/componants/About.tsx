@@ -24,7 +24,7 @@ const sections: Section[] = [
       {
         subtitle: "Fast website",
         description:
-          "40% of online users leave a website if it takes more than three seconds to load, and 47% of online shoppers expect an online retail web page to load in under two seconds          ",
+          "40% of online users leave a website if it takes more than three seconds to load, and 47% of online shoppers expect an online retail web page to load in under two seconds.",
       },
     ],
   },
@@ -34,17 +34,17 @@ const sections: Section[] = [
       {
         subtitle: "Responsive Website",
         description:
-          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
+          "A responsive website is essential for capturing user attention, especially with most users accessing websites via mobile. Neglecting mobile users can harm engagement and SEO. Responsive design ensures optimal user experience across devices, reducing bounce rates and facilitating social sharing. Ultimately, it leads to higher conversion rates.",
       },
     ],
   },
   {
-    title: "High Fidelity",
+    title: "Settle Animation",
     details: [
       {
-        subtitle: "Design file = interface",
+        subtitle: " boosting engagement ",
         description:
-          "In today's fast-paced digital landscape, losing your potential customers' attention due to slow, boring, or confusing interfaces is a risk you can't afford.",
+          "Settled web animations are crucial for boosting engagement by subtly enhancing user experience without overwhelming them. They guide focus, convey information effectively, and improve retention rates. Unlike flashy animations, settled ones create a professional aesthetic, fostering trust with users and encouraging exploration on websites.",
       },
     ],
   },

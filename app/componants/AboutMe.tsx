@@ -50,6 +50,18 @@ const AboutMe = () => {
           <HugeText content="It_matter" noWrap={false} />
         </div>
       </motion.div>
+      <div className="max-w-xl text-center">
+        <Paragraph
+          content="
+           My recipe for a successful website comprises three key elements:
+           responsiveness, ensuring optimal viewing across devices; performance
+           optimization, prioritizing fast loading times; and settled animations,
+           enhancing user experience subtly. These factors combine to prolong
+           user engagement, fostering trust and satisfaction for a successful
+           online presence.
+          "
+        />
+      </div>
       <div className="line-vr-after"></div>
       <About />
     </div>

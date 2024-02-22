@@ -21,7 +21,6 @@ interface ProjectData {
 const Features: React.FC = () => {
   const [projects, setProjects] = useState<ProjectData[]>([]);
   const params = usePathname();
-  console.log(params);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,9 +29,19 @@ const Features: React.FC = () => {
         );
         const data = response.data;
         if (params == "/Work") {
-          setProjects(data.reverse());
+          setProjects(
+            data.sort((a, b) => {
+              return a.id - b.id;
+            })
+          );
         } else {
-          setProjects(data.reverse().slice(0, 3));
+          setProjects(
+            data
+              .sort((a, b) => {
+                return a.id - b.id;
+              })
+              .slice(0, 3)
+          );
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -58,7 +67,19 @@ const Features: React.FC = () => {
           </div>
         </div>
       ) : (
-        ""
+        <div className="grid grid-cols-5 mb-12 ">
+          <div>
+            <div className="line-hr">
+              <H3 content="Portfolio" />
+            </div>
+          </div>
+          <div className="md:col-span-4 col-span-2 grid grid-cols-1">
+            <HugeText content="Selected__" noWrap={false} />
+            <div className="text-end">
+              <HugeText content="__Projects" noWrap={false} />
+            </div>
+          </div>
+        </div>
       )}
       <div className="grid gap-8">
         {projects.map((project, i) => (
