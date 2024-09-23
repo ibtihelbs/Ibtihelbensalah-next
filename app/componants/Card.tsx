@@ -56,7 +56,7 @@ const Card: React.FC<CardProps> = ({
             ))}
           </ul>
         </div>
-        <div className="w-[200px]">
+        <div className="min-w-[200px]">
           <H2 content={name} />
         </div>
 

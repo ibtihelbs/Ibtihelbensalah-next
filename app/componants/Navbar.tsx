@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Search from "./Search";
 import Link from "next/link";
 import { TiThMenu } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
@@ -124,14 +123,6 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="flex justify-between w-screen absolute z-10  md:py-6 md:px-10 px-5 bg-transparent">
-      {/**
-       * 
-       * <Search />
-      <Link href={"/"}>
-        <h1 className="cursor-pointer text-xl font-bold">ibs</h1>
-      </Link>
-       */}
-      . .
       <NavbarDesktop />
       <NavbarMobile
         handleMenuToggle={handleMenuToggle}

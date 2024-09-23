@@ -3,7 +3,7 @@ interface contentProp {
 }
 const H2: React.FC<contentProp> = ({ content }) => {
   return (
-    <h2 className="font-audio capitalize italic text-[16px] sm:text-2xl leading-[1] md:text-4xl">
+    <h2 className="font-audio capitalize italic text-[16px] sm:text-2xl leading-[1] md:text-3xl">
       {content}
     </h2>
   );
