@@ -3,7 +3,7 @@ import Image from "next/image";
 import H3 from "./H3";
 import H2 from "./H2";
 import { FaGithub, FaLink } from "react-icons/fa";
-interface CardProps {
+type CardProps = {
   key: number;
   _id: string;
   id: number;
@@ -17,7 +17,7 @@ interface CardProps {
   contributions: string;
   exploreLink: string;
   codeLink: string;
-}
+};
 
 const Card: React.FC<CardProps> = ({
   _id,

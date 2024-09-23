@@ -123,6 +123,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="flex justify-between w-screen absolute z-10  md:py-6 md:px-10 px-5 bg-transparent">
+      ..
       <NavbarDesktop />
       <NavbarMobile
         handleMenuToggle={handleMenuToggle}

@@ -5,7 +5,7 @@ import Card from "./Card";
 import { usePathname } from "next/navigation";
 import HugeText from "./HugeText";
 import H3 from "./H3";
-interface ProjectData {
+type ProjectData = {
   name: string;
   image: string;
   description: string;
@@ -16,7 +16,7 @@ interface ProjectData {
   _id: string;
   id: number;
   codeLink: string;
-}
+};
 
 const Features: React.FC = () => {
   const [projects, setProjects] = useState<ProjectData[]>([]);
@@ -82,11 +82,15 @@ const Features: React.FC = () => {
         </div>
       )}
       <div className="grid gap-8">
-        {projects.map((project, i) => (
-          <div key={i} className="flex justify-center">
-            <Card {...project} />
-          </div>
-        ))}
+        {projects ? (
+          <h1> Loading .... </h1>
+        ) : (
+          projects.map((project, i) => (
+            <div key={i} className="flex justify-center">
+              <Card {...project} />
+            </div>
+          ))
+        )}
       </div>
     </section>
   );
