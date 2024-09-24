@@ -5,6 +5,7 @@ import Card from "./Card";
 import { usePathname } from "next/navigation";
 import HugeText from "./HugeText";
 import H3 from "./H3";
+
 type ProjectData = {
   name: string;
   image: string;
@@ -20,7 +21,9 @@ type ProjectData = {
 
 const Features: React.FC = () => {
   const [projects, setProjects] = useState<ProjectData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const params = usePathname();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -28,7 +31,7 @@ const Features: React.FC = () => {
           "https://server-portfolio-guad.onrender.com/api/projects"
         );
         const data = response.data;
-        if (params == "/Work") {
+        if (params === "/Work") {
           setProjects(
             data.sort((a, b) => {
               return a.id - b.id;
@@ -43,17 +46,20 @@ const Features: React.FC = () => {
               .slice(0, 3)
           );
         }
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(false);
       }
     };
 
     fetchData();
-  }, [setProjects]);
+  }, [params]);
+
   return (
     <section className="py-4">
       {params !== "/Work" ? (
-        <div className="grid grid-cols-5 mb-12 ">
+        <div className="grid grid-cols-5 mb-12">
           <div>
             <div className="line-hr">
               <H3 content="Portfolio" />
@@ -67,7 +73,7 @@ const Features: React.FC = () => {
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-5 mb-12 ">
+        <div className="grid grid-cols-5 mb-12">
           <div>
             <div className="line-hr">
               <H3 content="Portfolio" />
@@ -82,8 +88,8 @@ const Features: React.FC = () => {
         </div>
       )}
       <div className="grid gap-8">
-        {projects ? (
-          <h1> Loading .... </h1>
+        {loading ? (
+          <h1>Loading...</h1>
         ) : (
           projects.map((project, i) => (
             <div key={i} className="flex justify-center">
