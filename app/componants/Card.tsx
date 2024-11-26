@@ -29,11 +29,11 @@ const Card: React.FC<CardProps> = ({
   const iconClass = "text-2xl md:text-4xl";
 
   return (
-    <div className="shadow-xl4 w-full max-w-[600px] h-[400px]   p-4 grid grid-cols-3 grid-row-3 gap-2 border-2 border-solid border-black rounded-2xl ">
+    <div className="shadow-xl4 w-full max-w-[600px] h-[400px]   p-4 grid grid-cols-3 grid-row-5 gap-2 border-2 border-solid border-black rounded-2xl ">
       <Link
         href={`DetailWork/${_id}`}
         aria-label={`View details of project ${name}`}
-        className="col-span-2 row-span-2 relative hover:opacity-80 hover:scale-95 transition-all"
+        className="col-span-2 row-span-4 relative hover:opacity-80 hover:scale-95 transition-all"
       >
         <Image
           src={image || "/placeholder.png"}
@@ -58,8 +58,8 @@ const Card: React.FC<CardProps> = ({
           )}
         </ul>
       </div>
-      <div className="col-span-2">
-        <H2 content={name} />
+      <div className="col-span-2 border-[3px]  border-black rounded-2xl p-3">
+        <H3 content={name} />
       </div>
 
       <div>
