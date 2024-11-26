@@ -49,7 +49,7 @@ const Card: React.FC<CardProps> = ({
         <ul className="flex gap-2 flex-wrap">
           {technologies.frontend.length > 0 ? (
             technologies.frontend.map((tech, i) => (
-              <li key={i} className="px-1 py-[2px]  border-[3px] rounded-full">
+              <li key={i} className="px-1 py-[2px] border-black border rounded-full">
                 {tech}
               </li>
             ))
