@@ -36,7 +36,7 @@ const Hero = () => {
           <HugeText content="developer" noWrap={true} />
         </div>
       </motion.div>
-      <div className="flex md:flex-row md:justify-between  md:items-end flex-col items-center md:w-[1000px]">
+      <div className="flex md:flex-row md:justify-between  md:items-end flex-col items-center w-full">
         <div className="w-40 md:text-start text-center">
           <Paragraph content="I create modern catchy websites that will capture your audience" />
         </div>

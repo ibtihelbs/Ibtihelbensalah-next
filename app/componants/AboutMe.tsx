@@ -63,7 +63,6 @@ const AboutMe = () => {
         />
       </div>
       <div className="line-vr-after"></div>
-      <About />
     </div>
   );
 };

@@ -43,7 +43,7 @@ const Features: React.FC = () => {
               .sort((a, b) => {
                 return a.id - b.id;
               })
-              .slice(0, 3)
+              .slice(0, 4)
           );
         }
         setLoading(false);
@@ -55,9 +55,10 @@ const Features: React.FC = () => {
 
     fetchData();
   }, [params]);
-
+  console.log(projects);
+  console.log("first");
   return (
-    <section className="py-4">
+    <section className="py-4 px-16">
       {params !== "/Work" ? (
         <div className="grid grid-cols-5 mb-12">
           <div>
@@ -87,7 +88,7 @@ const Features: React.FC = () => {
           </div>
         </div>
       )}
-      <div className="grid gap-8">
+      <div className=" grid med:grid-cols-2 gap-8">
         {loading ? (
           <h1>Loading...</h1>
         ) : (

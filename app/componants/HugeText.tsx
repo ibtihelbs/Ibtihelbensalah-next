@@ -24,7 +24,7 @@ const HugeText: React.FC<contentProp> = ({ content, noWrap }) => {
   return (
     <motion.h1
       variants={animateText}
-      className={`font-audio text-4xl md:leading-none uppercase  md:text-[150px]  ${
+      className={`font-audio text-4xl  md:leading-none uppercase md:text-8xl lg:text-[150px]  ${
         noWrap ? "whitespace-nowrap" : ""
       }`}
     >

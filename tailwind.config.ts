@@ -20,6 +20,9 @@ const config: Config = {
       animation: {
         "spin-slow": "spin 8s linear infinite",
       },
+      screens: {
+        med: "900px",
+      },
     },
   },
   plugins: [],

@@ -47,7 +47,7 @@ const Details = () => {
   return (
     <section className="h-auto md:h-screen flex items-center">
       {singleData && (
-        <div className=" grid items-center gap-4 grid-cols-1 md:grid-cols-2 md:gap-8 p-8  md:p-14 md:py-20">
+        <div className=" grid  gap-4 grid-cols-1 md:grid-cols-2 md:gap-8 p-8  md:p-14 md:py-20">
           <div className="grid gap-4">
             <Image
               src={singleData.image}
@@ -73,23 +73,27 @@ const Details = () => {
               <div>
                 <hr />
                 <H3 content="Technologie" />
-                {singleData.technologies.frontend.map((v, i) => (
-                  <span
-                    className="text-[8px]  border-solid border-black px-2 py-1 rounded-full border-[1px]"
-                    key={i}
-                  >
-                    # {v}{" "}
-                  </span>
-                ))}
+                <div className="flex gap-1">
+                  {singleData.technologies.frontend.map((v, i) => (
+                    <span
+                      className="text-[8px]  border-solid border-black px-2 py-1 rounded-full border-[1px]"
+                      key={i}
+                    >
+                      # {v}{" "}
+                    </span>
+                  ))}
+                </div>
                 <br />
-                {singleData.technologies.backend.map((v, i) => (
-                  <span
-                    className="text-[8px]  border-solid border-black px-2 py-1 rounded-full border-[1px]"
-                    key={i}
-                  >
-                    #{v}
-                  </span>
-                ))}
+                <div className="flex gap-">
+                  {singleData.technologies.backend.map((v, i) => (
+                    <span
+                      className="text-[8px]  border-solid border-black px-2 py-1 rounded-full border-[1px]"
+                      key={i}
+                    >
+                      #{v}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div>
                 <H3 content="Links" />

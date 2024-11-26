@@ -3,8 +3,8 @@ import Image from "next/image";
 import H3 from "./H3";
 import H2 from "./H2";
 import { FaGithub, FaLink } from "react-icons/fa";
+
 type CardProps = {
-  key: number;
   _id: string;
   id: number;
   name: string;
@@ -12,73 +12,81 @@ type CardProps = {
   description: string;
   technologies: {
     frontend: string[];
-    backend: string[];
+    backend?: string[];
   };
-  contributions: string;
   exploreLink: string;
-  codeLink: string;
+  codeLink?: string;
 };
 
 const Card: React.FC<CardProps> = ({
   _id,
-  id,
   name,
   image,
-  description,
   technologies,
-  contributions,
   exploreLink,
   codeLink,
 }) => {
+  const iconClass = "text-2xl md:text-4xl";
+
   return (
-    <div className=" shadow-xl4 w-[80vw] flex flex-col items-center  md:p-4  gap-2 border-2 border-solid border-black rounded-2xl md:rounded-[50px]">
+    <div className="shadow-xl4 w-full max-w-[600px] h-[400px]   p-4 grid grid-cols-3 grid-row-3 gap-2 border-2 border-solid border-black rounded-2xl ">
       <Link
         href={`DetailWork/${_id}`}
-        className="cursor w-full md:h-96 h-40 relative hover:opacity-80 hover:scale-95 transition-all "
+        aria-label={`View details of project ${name}`}
+        className="col-span-2 row-span-2 relative hover:opacity-80 hover:scale-95 transition-all"
       >
         <Image
-          src={image}
+          src={image || "/placeholder.png"}
           alt={`Project: ${name}`}
           fill
-          className="shadow-lg   hover:cursor-pointer object-cover border-2 border-solid border-black rounded-2xl  md:rounded-[50px] overflow-hidden"
+          placeholder="blur"
+          blurDataURL="/placeholder.png"
+          className="shadow-lg object-cover border-2 border-solid border-black rounded-2xl  overflow-hidden"
         />
       </Link>
+      <div className="row-span-2">
+        <H3 content="Tech:" />
+        <ul className="flex gap-2 flex-wrap">
+          {technologies.frontend.length > 0 ? (
+            technologies.frontend.map((tech, i) => (
+              <li key={i} className="px-1 py-[2px]  border-[3px] rounded-full">
+                {tech}
+              </li>
+            ))
+          ) : (
+            <li>No technologies listed</li>
+          )}
+        </ul>
+      </div>
+      <div className="col-span-2">
+        <H2 content={name} />
+      </div>
 
-      <div
-        id="details"
-        className="flex  md:px-12 md:py-6  p-2  w-full justify-between"
-      >
+      <div>
         <div className="hidden md:block">
-          <H3 content="Tech : " />
-          <ul>
-            {technologies.frontend.map((v, i) => (
-              <li key={i}> #{v} </li>
-            ))}
-          </ul>
+          <H3 content="Links:" />
         </div>
-        <div className="min-w-[200px]">
-          <H2 content={name} />
-        </div>
-
-        <div>
-          <div className="hidden md:block">
-            <H3 content="Links:" />
-          </div>
-          <ul className="flex flex-row justify-between">
+        <div className="grid grid-cols-3">
+          <ul className="grid gap-3">
             <li>
-              <Link href={exploreLink}>
-                <FaLink />
+              <Link href={exploreLink} aria-label={`Explore ${name}`}>
+                <FaLink className={iconClass} />
               </Link>
             </li>
-            <li>
-              <Link href={exploreLink}>
-                {" "}
-                <FaGithub />{" "}
-              </Link>
-            </li>
+            {codeLink && (
+              <li>
+                <Link href={codeLink} aria-label={`View code for ${name}`}>
+                  <FaGithub className={iconClass} />
+                </Link>
+              </li>
+            )}
           </ul>
-          <Link href={`DetailWork/${_id}`} className="w-[50px] h-[50px]">
-            <Image src={"/cursor.gif"} alt="cursor" width={100} height={100} />
+          <Link
+            className="col-span-2 "
+            href={`DetailWork/${_id}`}
+            aria-label="See details"
+          >
+            <Image src="/cursor.gif" alt="cursor" height={100} width={100} />
           </Link>
         </div>
       </div>
