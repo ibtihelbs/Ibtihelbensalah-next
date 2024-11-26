@@ -6,6 +6,7 @@ import Contact from "./componants/Contact";
 import Services from "./componants/Services";
 import Shapes from "./componants/Shapes";
 import Aboutme from "./componants/AboutMe";
+import Skills from "./componants/Skills";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between gap-14 ">
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <Shapes />
       <Aboutme />
+      <Skills />
       <Shapes />
       <Features />
 
