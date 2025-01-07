@@ -69,8 +69,8 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
     },
   };
   return (
-    <div className="font-audio visible md:hidden ">
-      <button onClick={handleMenuToggle}>
+    <div className="font-cinzel visible md:hidden ">
+      <button onClick={handleMenuToggle} aria-label="menu button">
         <TiThMenu />{" "}
       </button>
       <AnimatePresence>
@@ -84,7 +84,11 @@ const NavbarMobile: React.FC<NavbarMobileProps> = ({
         } absolute right-0 top-0 origin-top flex flex-col justify-between gap-4 w-full h-screen  bg-main`}
           >
             <li>
-              <button className="float-right" onClick={handleMenuToggle}>
+              <button
+                aria-label="menu-btn"
+                className="float-right"
+                onClick={handleMenuToggle}
+              >
                 <IoClose />
               </button>
             </li>

@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        audio: ["var(--font-audio)"],
+        cinzel: ["var(--font-cinzel)"],
       },
       colors: {
         main: "rgb(245, 245, 220)",
+        accent: "#60FF42",
       },
       boxShadow: {
         xl4: "5px 5px 5px 0px black",

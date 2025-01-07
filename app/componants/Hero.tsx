@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
         <Link
           href={"../#contact"}
-          className="py-2 px-8 text-xl rounded-full border-black border-2 border-solid"
+          className="bg-accent py-2 px-8 text-xl rounded-full border-black border-2 border-solid"
         >
           Contact
         </Link>

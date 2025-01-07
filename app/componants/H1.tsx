@@ -5,7 +5,7 @@ interface contentProp {
 const H1: React.FC<contentProp> = ({ content, noWrap }) => {
   return (
     <h1
-      className={`font-audio text-2xl md:text-5xl ${
+      className={`font-cinzel text-2xl md:text-5xl ${
         noWrap ? "whitespace-nowrap" : ""
       }`}
     >

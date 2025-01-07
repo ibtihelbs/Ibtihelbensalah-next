@@ -20,7 +20,7 @@ export default function Home() {
 
       <Link
         href={"/Work"}
-        className="font-audio  flex justify-between items-center text-4xl"
+        className="font-cinzel  flex justify-between items-center text-4xl"
       >
         more <VscArrowRight />{" "}
       </Link>

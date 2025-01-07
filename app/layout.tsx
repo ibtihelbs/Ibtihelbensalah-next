@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const Cinzel = Cinzel_Decorative({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-audio",
+  variable: "--font-cinzel",
 });
 export const metadata: Metadata = {
   title: "ibtihel ben salah-front end developer-portfolio",
