@@ -1,9 +1,6 @@
-"use client";
-import Spline from "@splinetool/react-spline";
 const page = () => {
   return (
     <div className="relative h-screen w-screen">
-      <Spline scene="https://prod.spline.design/BMvF1lfrpAfRKfPN/scene.splinecode" />
       <div
         style={{ transform: "translate(-50%,-50%)" }}
         className="w-4/5 max-w-[800px] absolute  top-1/2 left-1/2 md:z-10"

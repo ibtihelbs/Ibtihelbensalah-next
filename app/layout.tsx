@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Inter, Cinzel_Decorative } from "next/font/google";
 import "./globals.css";
 import Navbar from "./componants/Navbar";

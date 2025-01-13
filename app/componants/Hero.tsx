@@ -1,5 +1,4 @@
 "use client";
-import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import H3 from "./H3";
