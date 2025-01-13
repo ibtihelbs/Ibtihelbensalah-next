@@ -56,10 +56,9 @@ const Features: React.FC = () => {
 
     fetchData();
   }, [params]);
-  console.log(projects);
-  console.log("first");
+
   return (
-    <section className="py-4 px-16">
+    <section className="md:py-6 md:px-16 p-4">
       {params !== "/Work" ? (
         <div className="grid grid-cols-5 mb-12">
           <div>

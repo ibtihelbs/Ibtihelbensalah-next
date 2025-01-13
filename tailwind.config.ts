@@ -23,6 +23,7 @@ const config: Config = {
       },
       screens: {
         med: "900px",
+        sm: "400px",
       },
     },
   },

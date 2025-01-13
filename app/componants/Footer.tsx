@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
           </li>
         </ul>
         <p className="text-center font-bold">
-          © 2024 ibtihel ben salah. All rights reserved.
+          © 2025 ibtihel ben salah. All rights reserved.
         </p>
       </div>
     </footer>

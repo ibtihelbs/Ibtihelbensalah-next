@@ -42,24 +42,23 @@ const Card: React.FC<CardProps> = ({
         className="col-span-2 row-span-4 relative hover:opacity-80 hover:scale-95 transition-all"
       >
         <Image
-          src={image || "/placeholder.png"}
+          src={image}
           alt={`Image of the project: ${name}`}
           fill
-          placeholder="blur"
-          blurDataURL="/placeholder.png"
+          sizes="(max-width: 768px) 330px, 33px"
           className="shadow-lg object-cover border-2 border-solid border-black rounded-2xl overflow-hidden"
         />
       </Link>
 
       {/* Technologies */}
-      <div className="row-span-2">
+      <div className="row-span-2 grid gap-2">
         <H3 content="Tech:" />
         <ul className="flex gap-2 flex-wrap" aria-label="Technologies used">
           {technologies.frontend.length > 0 ? (
             technologies.frontend.map((tech, i) => (
               <li
                 key={i}
-                className="px-1 py-[2px] border-black border rounded-full"
+                className="py-1 px-2 text-ellipsis overflow-hidden border-black text-[12px] border rounded-full"
               >
                 {tech}
               </li>
