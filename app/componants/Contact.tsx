@@ -106,21 +106,24 @@ export const Contact = () => {
           />
         </div>
 
-        <button type="submit" disabled={isSubmitting} className="submit-button">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="submit-button border-2 rounded-full px-2 py-1 float-right"
+        >
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>
 
         {submitStatus && (
           <div
-            className={`status-message border-2 rounded-full px-2 py-1 float-right ${
-              submitStatus.success ? "success" : "error"
+            className={`status-message  ${
+              submitStatus.success ? "text-green-600" : "text-red-700"
             }`}
           >
             {submitStatus.message}
           </div>
         )}
       </form>
-      
     </div>
   );
 };
