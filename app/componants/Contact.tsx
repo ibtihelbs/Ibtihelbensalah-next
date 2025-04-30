@@ -112,7 +112,7 @@ export const Contact = () => {
 
         {submitStatus && (
           <div
-            className={`status-message ${
+            className={`status-message border-2 rounded-full px-2 py-1 ${
               submitStatus.success ? "success" : "error"
             }`}
           >
@@ -120,7 +120,9 @@ export const Contact = () => {
           </div>
         )}
       </form>
-      <a href="mailto:ibtihel.bensalah@outlook.fr">click</a>
+      <a className="text-center" href="mailto:ibtihel.bensalah@outlook.fr">
+        ibtihel.bensalah@outlook.fr
+      </a>
     </div>
   );
 };
