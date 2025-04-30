@@ -120,9 +120,7 @@ export const Contact = () => {
           </div>
         )}
       </form>
-      <a className="text-center" href="mailto:ibtihel.bensalah@outlook.fr">
-        ibtihel.bensalah@outlook.fr
-      </a>
+      
     </div>
   );
 };

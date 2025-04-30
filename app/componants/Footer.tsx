@@ -6,6 +6,12 @@ const Footer: React.FC = () => {
   const pathName = usePathname();
   return (
     <footer className=" flex items-center justify-center p-9 w-full">
+      <a
+        className="text-center font-black"
+        href="mailto:ibtihel.bensalah@outlook.fr"
+      >
+        ibtihel.bensalah@outlook.fr
+      </a>
       <div className="grid gap-5">
         <a
           className={`underline ${
@@ -53,6 +59,7 @@ const Footer: React.FC = () => {
             </a>
           </li>
         </ul>
+
         <p className="text-center font-bold">
           © 2025 ibtihel ben salah. All rights reserved.
         </p>
