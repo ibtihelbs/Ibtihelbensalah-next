@@ -30,7 +30,7 @@ export const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         form.current,
         {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC!,
         }
       );
 
