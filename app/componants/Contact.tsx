@@ -112,7 +112,7 @@ export const Contact = () => {
 
         {submitStatus && (
           <div
-            className={`status-message border-2 rounded-full px-2 py-1 ${
+            className={`status-message border-2 rounded-full px-2 py-1 float-right ${
               submitStatus.success ? "success" : "error"
             }`}
           >
