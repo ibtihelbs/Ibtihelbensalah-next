@@ -28,9 +28,7 @@ const Features: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<ProjectData[]>(
-          "https://server-portfolio-guad.onrender.com/api/projects"
-        );
+        const response = await axios.get<ProjectData[]>("./data.json");
         const data = response.data;
         if (params === "/Work") {
           setProjects(

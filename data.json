@@ -1,6 +1,6 @@
 [
   {
-    "_id": 0,
+    "id": 0,
     "name": "Open-Source Contribution: Spinning Text Component",
     "image": "/portfolio/textspinner.gif",
     "description": "Contributed to the Motion Primitives open-source animation library by creating a customizable spinning text component.",
@@ -12,7 +12,7 @@
     "codeLink": "https://github.com/ibelick/motion-primitives/pull/33"
   },
   {
-    "_id": 1,
+    "id": 1,
     "name": "UI for Online E-Shop",
     "image": "/portfolio/6.png",
     "description": "Designed a sleek and responsive user interface for an online e-shop, elevating the shopping experience with modern aesthetics and smooth interactions.",
@@ -25,7 +25,7 @@
     "codeLink": "https://github.com/ibtihelbs/bakeryshop"
   },
   {
-    "_id": 2,
+    "id": 2,
     "name": "E-commerce Project (MERN Stack)",
     "image": "/portfolio/1.png",
     "description": "Developed a comprehensive e-commerce platform with a focus on branding, copywriting, and a full-stack admin dashboard.",
@@ -38,7 +38,7 @@
     "codeLink": "https://github.com/ibtihelbs/POLARIZED/"
   },
   {
-    "_id": 3,
+    "id": 3,
     "name": "Full-stack Dashboard in Next.js",
     "image": "/portfolio/2.png",
     "description": "Built a full-stack dashboard application using Next.js, incorporating TypeScript for strong typing and PostgreSQL for backend data management.",
@@ -51,7 +51,7 @@
     "codeLink": "https://github.com/ibtihelbs/next-dashboard"
   },
   {
-    "_id": 4,
+    "id": 4,
     "name": "Countries API Explorer",
     "image": "/portfolio/3.png",
     "description": "Created a web application that allows users to search and explore country data using the REST Countries API.",
@@ -64,7 +64,7 @@
     "codeLink": "https://github.com/ibtihelbs/reactapicountries"
   },
   {
-    "_id": 5,
+    "id": 5,
     "name": "Calculator App with Theme Switcher",
     "image": "/portfolio/4.png",
     "description": "Built a fully functional calculator app with a theme switcher, offering users the ability to perform basic operations and toggle between themes.",
@@ -76,7 +76,7 @@
     "codeLink": "https://github.com/ibtihelbs/calculator-themeswitcher"
   },
   {
-    "_id": 6,
+    "id": 6,
     "name": "E-commerce Product Details",
     "image": "/portfolio/5.png",
     "description": "Developed a product detail page for an e-commerce platform, featuring a lightbox gallery and a cart functionality.",
