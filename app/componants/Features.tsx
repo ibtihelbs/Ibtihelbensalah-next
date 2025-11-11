@@ -5,7 +5,7 @@ import Card from "./Card";
 import { usePathname } from "next/navigation";
 import HugeText from "./HugeText";
 import H3 from "./H3";
-
+//p
 type ProjectData = {
   name: string;
   image: string;
