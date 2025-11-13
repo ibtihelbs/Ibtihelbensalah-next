@@ -1,8 +1,27 @@
-@tailwind base;
-html {
-  scroll-behavior: smooth;
+@import "tailwindcss"; /* v4+ main import syntax */
+
+/* Optional base resets if you need them */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply overflow-x-hidden font-[Poppins] font-normal text-black;
+  }
 }
-@tailwind components;
+
+/* Your custom theme variables */
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --color-main: rgb(245, 245, 220);
+  --color-accent: #60ff42;
+  --xl4: 5px 5px 5px 0px black;
+  --spin-slow: spin 8s linear infinite;
+  --med: 900px;
+  --sm: 400px;
+}
+
+/* ⚠️ Must come AFTER @theme */
 @tailwind utilities;
 
 :root {

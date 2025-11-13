@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={` ${inter.className} bg-main ${Cinzel.variable}`}>
         <div className="overlay"></div>
         <Navbar />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

@@ -53,12 +53,15 @@ const Card: React.FC<CardProps> = ({
       {/* Technologies */}
       <div className="row-span-2 grid gap-2">
         <H3 content="Tech:" />
-        <ul className="flex gap-2 flex-wrap" aria-label="Technologies used">
+        <ul
+          className="flex gap-1 items-start flex-wrap"
+          aria-label="Technologies used"
+        >
           {technologies.frontend.length > 0 ? (
             technologies.frontend.map((tech, i) => (
               <li
                 key={i}
-                className="py-1 px-2 text-ellipsis overflow-hidden border-black text-[12px] border rounded-full"
+                className=" px-2 text-ellipsis overflow-hidden border-black text-[12px] border rounded-full"
               >
                 {tech}
               </li>
